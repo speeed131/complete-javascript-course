@@ -9,7 +9,14 @@
 <body>
     <h1>Asynchronous JavaScript</h1>
     <script>
-        
+        async function callApi() {
+            // await でresponseオブジェクトが返る
+            const res = await window.fetch("https://jsonplaceholder.typicode.com/users")
+            const users = await res.json()
+            console.log(users)
+
+        }
+        callApi()
     </script>
 </body>
 </html>
